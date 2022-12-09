@@ -11,3 +11,46 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+body{
+  background-color: aqua;
+
+
+
+
+}
+.h1{
+  font-family:  Courier;
+  font: solid;
+  font-size: 21px;
+  display: flex;
+   justify-content: center; 
+  
+
+ 
+}
+.h2{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 1%;
+  border: solid;
+  width: 30%;
+  position: absolute;
+  left: 35%;
+  top: 30%;
+   border-radius: 20%; 
+   background-color: antiquewhite;
+
+}
+
+  .h3{
+    font-family:  Courier;
+    font: solid;
+    font-size: 21px;
+    display: flex;
+     justify-content: center; 
+    
+  
+   
+  }
+
+

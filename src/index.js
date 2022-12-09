@@ -1,17 +1,28 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM  from "react-dom";
+import "./index.css";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+var curdate=new Date();
+curdate=curdate.getHours();//Using get housr we are able to take only hour 
+var currdate=new Date().toLocaleTimeString();
+let say;
+const cssStyle={};
+if(curdate>=1 && curdate<12)
+{
+    say='Good Morning';
+    cssStyle.color='blue';
+}
+else if(curdate>=12 && curdate<16){
+    say='Good Afternoon';
+    cssStyle.color='green';
+}
+else if(curdate>=17 && curdate<20){
+    say='Good Evening';
+    cssStyle.color='green';
+}
+else{
+    say='good night';
+    cssStyle.color='rgb(155, 39, 209)';
+}
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+ReactDOM.render(<fieldset className="h2"><h1 className="h1" >Hello Sir, <span style={cssStyle}>{say}</span></h1><h1 className="h3"> Time:{currdate}</h1></fieldset>,document.getElementById('root'))
